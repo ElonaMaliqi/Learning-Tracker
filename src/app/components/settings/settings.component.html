@@ -1,0 +1,7 @@
+<div class="settings-container">
+  <app-hamburger-menu [menuItems]="menuItems"></app-hamburger-menu>
+  <h2>Pick your vibe</h2>
+  <button (click)="toggleTheme()">
+    {{ isDarkMode ? 'Switch to Light Mode ☀️' : 'Switch to Dark Mode 🌙' }}
+  </button>
+</div>

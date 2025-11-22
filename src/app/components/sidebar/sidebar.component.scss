@@ -1,0 +1,75 @@
+.sidebar {
+  width: 250px;
+  background-color: var(--card-bg);
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+
+  &.collapsed {
+    transform: translateX(-100%);
+  }
+
+  h2 {
+    color: #fff;
+    font-size: 40px;
+  }
+
+  .sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    .hamburger {
+      display: none;
+      font-size: 1.5rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+  }
+
+  .nav-links {
+    list-style: none;
+    padding: 0;
+    font-size: 20px;
+
+    li {
+      margin-bottom: 2rem;
+      display: flex;
+
+      img {
+        width: 30px;
+        padding-right: 15px;
+      }
+
+      a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: 500;
+
+        &.active {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+    &.collapsed {
+      transform: translateX(0);
+    }
+  }
+
+  .sidebar-header .hamburger {
+    display: block;
+  }
+}

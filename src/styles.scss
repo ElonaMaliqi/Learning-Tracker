@@ -1,0 +1,46 @@
+* {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #f2f2f2;
+}
+
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select {
+  background-color: #222;
+  color: #fff;
+  border-color: #555;
+}
+
+body.dark-mode button {
+  background-color: #333;
+  color: #fff;
+}
+
+
+:root {
+  --card-bg: #0c3f55;
+  --border: #e5e7eb;
+  --shadow: 0 2px 4px rgba(0,0,0,0.1);
+  --accent: #2196f3;
+  --grid-empty: #e5e7eb;
+  --grid-1: #c6e48b;
+  --grid-2: #7bc96f;
+  --grid-3: #239a3b;
+  --grid-4: #196127;
+}
+
+.dark-mode {
+  --card-bg: #1e1e1e;
+  --border: #333;
+  --shadow: none;
+  --accent: #64b5f6;
+  --grid-empty: #2e2e2e;
+  --grid-1: #355e3b;
+  --grid-2: #2f8d46;
+  --grid-3: #2eb85c;
+  --grid-4: #27d674;
+}

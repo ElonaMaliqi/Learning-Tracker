@@ -1,0 +1,61 @@
+.add-log-container {
+  max-width: 600px;
+  margin: 80px auto;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 30px;
+  }
+
+  label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #aaaaaa;
+    box-sizing: border-box;
+  }
+
+  .error {
+    color: red;
+    font-size: 12px;
+  }
+
+  button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1976d2;
+    color: white;
+    cursor: pointer;
+
+    &:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .add-log-container {
+    margin-left: 90px;
+  }
+}
+
+@media (max-width: 768px) {
+  .add-log-container {
+    margin: 20px auto;
+  }
+}

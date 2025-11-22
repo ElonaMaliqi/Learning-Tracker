@@ -1,0 +1,18 @@
+<app-hamburger-menu [menuItems]="menuItems"></app-hamburger-menu>
+<div class="timer-container">
+  
+  <h2>{{ timer.isBreak ? 'Break Time' : 'Work Session' }}</h2>
+
+  <div class="timer-display">
+    {{ minutes.toString().padStart(2, '0') }}:
+    {{ seconds.toString().padStart(2, '0') }}
+  </div>
+
+  <div class="timer-controls">
+    <button (click)="start()" [disabled]="timer.isRunning">Start</button>
+    <button (click)="pause()" [disabled]="!timer.isRunning">Pause</button>
+    <button (click)="reset()">Reset</button>
+  </div>
+</div>
+
+

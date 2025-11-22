@@ -1,0 +1,39 @@
+<app-hamburger-menu [menuItems]="menuItems"></app-hamburger-menu>
+<div class="add-log-container">
+  <h2>Add Study Log</h2>
+  <form [formGroup]="logForm" (ngSubmit)="onSubmit()">
+    <label for="topic">Topic*</label>
+    <input id="topic" type="text" formControlName="topic" />
+    <div
+      class="error"
+      *ngIf="logForm.get('topic')?.touched && logForm.get('topic')?.invalid"
+    >
+      Topic is required
+    </div>
+
+    <label for="date">Date*</label>
+    <input id="date" type="date" formControlName="date" />
+    <div
+      class="error"
+      *ngIf="logForm.get('date')?.touched && logForm.get('date')?.invalid"
+    >
+      Date is required
+    </div>
+
+    <label for="duration">Duration (hours)*</label>
+    <input id="duration" type="number" step="0.1" formControlName="duration" />
+    <div
+      class="error"
+      *ngIf="
+        logForm.get('duration')?.touched && logForm.get('duration')?.invalid
+      "
+    >
+      Duration must be greater than 0
+    </div>
+
+    <label for="notes">Notes</label>
+    <textarea id="notes" formControlName="notes"></textarea>
+
+    <button type="submit" [disabled]="logForm.invalid">Add Log</button>
+  </form>
+</div>

@@ -1,0 +1,14 @@
+<nav class="sidebar" [class.collapsed]="isCollapsed">
+  <div class="sidebar-header">
+    <h2>Learning Tracker</h2>
+    <button class="hamburger" (click)="toggleCollapse()">☰</button>
+  </div>
+
+  <ul class="nav-links">
+    <li><img src="../../../assets/icons/dashboard-icon.svg"><a routerLink="/dashboard" routerLinkActive="active">Dashboard</a></li>
+    <li><img src="../../../assets/icons/add-icon.svg"><a routerLink="/add" routerLinkActive="active">Add Log</a></li>
+    <li><img src="../../../assets/icons/view-icon.svg"><a routerLink="/logs" routerLinkActive="active">View Logs</a></li>
+    <li><img src="../../../assets/icons/timer-icon.svg"><a routerLink="/timer" routerLinkActive="active">Timer</a></li>
+    <li><img src="../../../assets/icons/settings-icon.svg"><a routerLink="/settings" routerLinkActive="active">Settings</a></li>
+  </ul>
+</nav>

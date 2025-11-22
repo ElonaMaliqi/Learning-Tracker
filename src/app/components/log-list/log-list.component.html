@@ -1,0 +1,36 @@
+<div class="filter-logs">
+  <app-hamburger-menu [menuItems]="menuItems"></app-hamburger-menu>
+  <h2>Study Logs</h2>
+
+  <app-filter (filterChanged)="applyFilter($event)"></app-filter>
+
+  <div *ngIf="filteredLogs.length === 0" class="no-logs">
+    <p>No logs found.</p>
+  </div>
+
+  <ul>
+    <li *ngFor="let log of filteredLogs">
+      <strong>{{ log.topic }}</strong
+      >{{ log.duration }} hours on {{ log.date }}
+    </li>
+  </ul>
+</div>
+
+<div class="log-list-container">
+  <h2>All Study Logs</h2>
+
+  <div *ngIf="logs.length === 0" class="no-logs">
+    No logs yet. Add a log first!
+  </div>
+
+  <div *ngFor="let log of logs" class="log-item">
+    <h3>{{ log.topic }}</h3>
+    <p><strong>Date:</strong> {{ log.date }}</p>
+    <p><strong>Duration:</strong> {{ log.duration }} hours</p>
+    <p *ngIf="log.notes"><strong>Notes:</strong> {{ log.notes }}</p>
+    <p *ngIf="log.tags?.length">
+      <strong>Tags:</strong> {{ log.tags?.join(", ") }}
+    </p>
+    <button (click)="deleteLog(log.id)">Delete</button>
+  </div>
+</div>

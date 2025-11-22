@@ -1,0 +1,72 @@
+<div class="dashboard-container">
+  <app-hamburger-menu [menuItems]="menuItems"></app-hamburger-menu>
+  <h2>Study Dashboard</h2>
+
+  <div *ngIf="logs.length === 0" class="no-logs">
+    No logs yet. Add some logs to see your dashboard.
+  </div>
+
+  <div class="logs-stats">
+    <div *ngIf="logs.length > 0">
+      <div class="stats-summary">
+        <p><span>Total Logs:</span> {{ logs.length }}</p>
+        <p><span>Total Hours:</span> {{ totalHours }}</p>
+        <p><span>Average Hours per Log:</span> {{ averageHours.toFixed(1) }}</p>
+      </div>
+      <div class="activity-card">
+        <h3>Study Activity</h3>
+
+        <div class="grid-container">
+          <div
+            class="cell"
+            *ngFor="let day of activityGrid"
+            [style.backgroundColor]="getColorFromHours(day.hours)"
+            title="{{ day.hours }}h on {{ day.date | date : 'MMM d' }}"
+          >
+            <div class="tooltip">
+              <strong>{{ day.hours }} hours</strong>
+              <span>{{ day.date | date : "MMM d, yyyy" }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <canvas #chartCanvas *ngIf="logs.length > 0"></canvas>
+  </div>
+</div>
+
+<div class="table-section">
+  <div class="header-row">
+    <h3>Recent Logs</h3>
+    <a routerLink="/logs" class="view-all">View All →</a>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Subject</th>
+        <th>Duration</th>
+        <th>Date</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let log of logs.slice(0, 5)">
+        <td>
+          <span
+            class="dot"
+            [style.backgroundColor]="getColorForTopic(log.topic)"
+          ></span>
+          {{ log.topic }}
+        </td>
+
+        <td>{{ log.duration }}h</td>
+
+        <td>{{ log.date | date : "MMM d, yyyy" }}</td>
+
+        <td>{{ log.notes || "—" }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

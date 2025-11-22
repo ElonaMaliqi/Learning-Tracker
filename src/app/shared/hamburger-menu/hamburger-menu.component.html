@@ -1,0 +1,9 @@
+<div class="hamburger-menu" (click)="toggleMenu()">
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+</div>
+
+<div class="mobile-menu" [class.open]="menuOpen">
+  <a *ngFor="let item of menuItems" [routerLink]="item.link">{{ item.label }}</a>
+</div>

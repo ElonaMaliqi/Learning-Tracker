@@ -1,0 +1,13 @@
+<div class="filter-container">
+  <input
+    type="text"
+    placeholder="Filter by topic..."
+    [(ngModel)]="topicFilter"
+    (input)="onFilterChange()" />
+
+  <input
+    type="number"
+    placeholder="Min duration (hours)"
+    [(ngModel)]="minDuration"
+    (input)="onFilterChange()" />
+</div>
