@@ -1,6 +1,7 @@
 # LearningTracker
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.19. ##
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.19.
+
 🚀 A modern Angular application for tracking study logs, visualizing progress, and managing daily activity.
 
 ## 📚 About the Project
