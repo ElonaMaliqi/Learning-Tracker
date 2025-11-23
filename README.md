@@ -42,6 +42,10 @@ Daily activity grid (GitHub-style)
 
 Stats summary and insights
 
+📱 Responsive UI
+
+Fully responsive with mobile-first adjustments
+
 🎨 Dark/Light Mode (if enabled)
 
 Toggle themes easily (optional)
