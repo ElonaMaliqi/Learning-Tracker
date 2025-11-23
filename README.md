@@ -2,6 +2,8 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.19.
 
+Demo: https://track-my-learning.netlify.app/
+
 🚀 A modern Angular application for tracking study logs, visualizing progress, and managing daily activity.
 
 ## 📚 About the Project
