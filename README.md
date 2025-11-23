@@ -6,6 +6,9 @@ Demo: https://track-my-learning.netlify.app/
 
 🚀 A modern Angular application for tracking study logs, visualizing progress, and managing daily activity.
 
+![Screenshot 2025-11-23 141533](https://github.com/user-attachments/assets/0fc2b382-3f36-446b-93e1-c7db98d437b5)
+
+
 ## 📚 About the Project
 
 Learning Tracker is an Angular-based web application that helps you:
