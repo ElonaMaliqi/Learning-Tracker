@@ -1,6 +1,54 @@
 # LearningTracker
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.19.
+🚀 A modern Angular application for tracking study logs, visualizing progress, and managing daily activity.
+
+## 📚 About the Project
+
+Learning Tracker is an Angular-based web application that helps you:
+
+Log study sessions
+
+Track subject-based progress
+
+Visualize activity using charts
+
+View a grid-style GitHub-inspired activity graph
+
+Manage and filter logs
+
+Use Pomodoro Timer
+
+## ✨ Features
+📝 Study Logs
+
+Add logs with subject, duration, date, and notes
+
+Display logs in a compact table layout
+
+"View All" button for full log list
+
+📊 Dashboard Overview
+
+Bar chart summarizing study durations
+
+Daily activity grid (GitHub-style)
+
+Stats summary and insights
+
+🎨 Dark/Light Mode (if enabled)
+
+Toggle themes easily (optional)
+
+## 🏗️ Tech Stack
+
+Angular 19
+
+TypeScript
+
+SCSS
+
+Chart.js
 
 ## Development server
 
